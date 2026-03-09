@@ -4,37 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfólio Web de um Desenvolvedor apaixonado por criar experiências digitais incríveis.">
-    <title>Portfólio | Desenvolvedor Web</title>
+    <title>Portfólio Acadêmico | Emmanuel</title>
 
-    <!-- Google Fonts: Uso de fontes modernas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;700;900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sections.css">
+    <!-- CSS unificado na raiz -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Header / Navbar -->
     <header class="header">
         <div class="container nav-container">
-            <a href="#" class="logo">Dev<span class="highlight">Portfolio</span></a>
+            <a href="#" class="logo">Portfólio<span class="highlight">Acadêmico</span></a>
 
             <nav class="nav">
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="#apresentacao">Apresentação</a></li>
+                    <li><a href="#formacao">Formação</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#competencias">Competências</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
                 <button id="theme-toggle" class="theme-btn" aria-label="Alterar Tema">
-                    <!-- Icon SVG Moon/Sun alterado via JS -->
                     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -64,98 +61,136 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero section">
+        <!-- 1. Página de Apresentação -->
+        <section id="apresentacao" class="hero section">
             <div class="hero-bg-glow"></div>
-            <div class="container hero-container">
+            <div class="container hero-container"
+                style="display: flex; align-items: center; gap: 40px; margin-top: 50px;">
                 <div class="hero-content">
-                    <p class="greeting fade-in-up">Visão Técnica e Estratégica</p>
-                    <h1 class="fade-in-up delay-1">Emmanuel</h1>
-                    <h2 class="role fade-in-up delay-2">Tech Lead & <span class="highlight">Product Manager</span></h2>
-                    <p class="bio fade-in-up delay-3">Co-founder e CTO da Zenix. Converto necessidades de negócio em
-                        arquiteturas escaláveis. Focado em alinhar eficiência operacional, inteligência artificial e
-                        viabilidade de produto.</p>
-                    <div class="hero-cta fade-in-up delay-4">
-                        <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-                        <a href="#contact" class="btn btn-secondary">Entrar em contato</a>
+                    <p class="greeting fade-in-up" id="dynamic-greeting">Calculando horário...</p>
+                    <h1 class="fade-in-up delay-1">Emmanuel Garakis</h1>
+                    <h2 class="role fade-in-up delay-2">Desenvolvedor e <span class="highlight">Analista de
+                            Sistemas</span></h2>
+
+                    <p class="bio fade-in-up delay-3">
+                        Sou apaixonado por tecnologia, com foco em Engenharia de Software e Gestão de Produtos.
+                        Busco converter as necessidades de negócios em arquiteturas inteligentes e escaláveis,
+                        aplicando melhores práticas de desenvolvimento na criação de soluções eficientes.
+                    </p>
+
+                    <div class="hero-cta fade-in-up delay-4" style="margin-top: 15px;">
+                        <p><strong>E-mail:</strong> emmanuel.garakis@email.com</p>
+                        <p><strong>WhatsApp:</strong> (12) 99168-6751</p>
                     </div>
                 </div>
-                <div class="hero-visual fade-in">
-                    <div class="glass-card visual-card">
-                        <div class="card-header">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                        <div class="card-body">
-                            <pre><code><span class="keyword">const</span> <span class="variable">developer</span> <span class="operator">=</span> {
-  <span class="property">name</span>: <span class="string">"Emmanuel"</span>,
-  <span class="property">focus</span>: [<span class="string">"Architecture"</span>, <span class="string">"AI"</span>, <span class="string">"Product Strategy"</span>],
-  <span class="property">hardWorker</span>: <span class="boolean">true</span>
-};
+                <!-- Foto Pessoal Solicitada -->
+                <div class="hero-visual fade-in" style="flex-shrink: 0; position: relative;">
+                    <img src="img/profile.png" alt="Foto de Emmanuel"
+                        style="width: 320px; height: 320px; border-radius: 50%; object-fit: cover; border: 4px solid var(--primary); box-shadow: 0 0 20px var(--primary-glow);">
+                </div>
+            </div>
+        </section>
 
-<span class="variable">developer</span>.<span class="method">buildFuture</span>();</code></pre>
-                        </div>
+        <!-- 2. Formação Acadêmica -->
+        <section id="formacao" class="about section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Formação Acadêmica</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="about-content scroll-hidden text-center"
+                    style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <br>
+                    <div class="glass-card" style="padding: 24px; width: 100%; border-left: 4px solid var(--primary);">
+                        <h3>Análise e Desenvolvimento de Sistemas (ADS)</h3>
+                        <p><strong>Instituição:</strong> FATEC São José dos Campos (Prof. Jessen Vidal)</p>
+                        <p><strong>Período:</strong> Em andamento</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about section">
+        <!-- 3. Cursos Complementares -->
+        <section id="cursos" class="projects section" style="background-color: var(--bg-alt);">
             <div class="container">
                 <div class="section-header">
-                    <h2>Sobre Mim</h2>
+                    <h2>Cursos e Certificações</h2>
                     <div class="line"></div>
                 </div>
-                <div class="about-content scroll-hidden">
-                    <div class="about-text">
-                        <p>Atuo na intersecção entre Engenharia de Software, Gestão de Produtos e Eficiência
-                            Operacional. Como Co-founder e CTO da Zenix (Hub de Tecnologia em São José dos Campos),
-                            lidero iniciativas complexas traduzindo objetivos de negócios em infraestrutura resiliente.
-                        </p>
-                        <p>Possuo uma visão híbrida que alia *Hard Engineering* a sólidos princípios de Gestão
-                            Financeira (DRE) e Estruturas de Holding. Não apenas escrevo código: eu arquiteturei,
-                            gerenciei e entreguei produtos digitais com viabilidade econômica comprovada.</p>
-                        <br>
-                        <h3>Minhas Especialidades Táticas</h3>
+                <!-- Div onde o JS com o 'for' vai injetar os cursos -->
+                <div class="projects-grid" id="courses-container"
+                    style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+                    <p>Carregando cursos via JavaScript...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projetos Desenvolvidos -->
+        <section id="projetos" class="projects section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Projetos Desenvolvidos</h2>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Div onde o JS com o 'for' vai injetar os projetos -->
+                <div class="projects-grid" id="projects-container">
+                    <p>Carregando projetos via JavaScript...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Competências -->
+        <section id="competencias" class="about section" style="background-color: var(--bg-alt);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Competências Técnicas e Interpessoais</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="about-content scroll-hidden" style="display: flex; flex-direction: column; gap: 40px;">
+                    <div>
+                        <h3>Hard Skills (Técnicas)</h3>
                         <br>
                         <div class="skills-container">
-                            <span class="skill-tag">Product Ownership</span>
-                            <span class="skill-tag">Inteligência Artificial Aplicada</span>
+                            <span class="skill-tag">HTML5 & CSS3</span>
+                            <span class="skill-tag">JavaScript (Vanilla & ES6)</span>
+                            <span class="skill-tag">React.js & Node.js</span>
+                            <span class="skill-tag">Git & GitHub</span>
                             <span class="skill-tag">Arquitetura de Sistemas</span>
-                            <span class="skill-tag">Metodologias Ágeis</span>
-                            <span class="skill-tag">Liderança de Times</span>
-                            <span class="skill-tag">Análise DRE & Holding</span>
-                            <span class="skill-tag">Escalabilidade</span>
+                            <span class="skill-tag">MySQL & NoSQL</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Soft Skills (Interpessoais)</h3>
+                        <br>
+                        <div class="skills-container">
+                            <span class="skill-tag"
+                                style="background: rgba(138, 43, 226, 0.1); border-color: #8a2be2;">Liderança de
+                                Times</span>
+                            <span class="skill-tag"
+                                style="background: rgba(138, 43, 226, 0.1); border-color: #8a2be2;">Trabalho em
+                                Equipe</span>
+                            <span class="skill-tag"
+                                style="background: rgba(138, 43, 226, 0.1); border-color: #8a2be2;">Comunicação
+                                Clara</span>
+                            <span class="skill-tag"
+                                style="background: rgba(138, 43, 226, 0.1); border-color: #8a2be2;">Resolução de
+                                Problemas Complexos</span>
+                            <span class="skill-tag"
+                                style="background: rgba(138, 43, 226, 0.1); border-color: #8a2be2;">Organização & Gestão
+                                Ágil</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Meus Projetos</h2>
-                    <div class="line"></div>
-                </div>
-
-                <div class="projects-grid" id="projects-container">
-                    <!-- Cards de projetos carregados via JS da API -->
-                    <div class="loading-state">Carregando projetos de alto nível...</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact section">
+        <!-- 6. Links e Contato -->
+        <section id="contato" class="contact section">
             <div class="container contact-container">
                 <div class="contact-info">
-                    <h2>Planejando seu <span class="highlight">próximo</span> passo estratégico?</h2>
-                    <p>Meu foco é agregar valor através de liderança técnica e produtos escaláveis. Se você busca
-                        resultados tangíveis e uma visão sistêmica robusta, inicie o contato abaixo.</p>
+                    <h2>Links <span class="highlight">Profissionais</span></h2>
+                    <p>Vamos nos conectar! Acesse meus perfis profissionais abaixo para acompanhar minha jornada.</p>
                     <div class="socials">
                         <a href="https://github.com/Garakis" class="icon-link" aria-label="GitHub" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -178,37 +213,27 @@
                                 <circle cx="4" cy="4" r="2"></circle>
                             </svg>
                         </a>
-                        <a href="https://wa.me/5512991686751" class="icon-link" aria-label="WhatsApp" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path
-                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
-                                </path>
-                            </svg>
-                        </a>
                     </div>
                 </div>
+
                 <div class="contact-form-wrapper glass-panel">
                     <form id="contact-form" class="form">
                         <div class="form-group">
-                            <label for="name">Nome Completo</label>
-                            <input type="text" id="name" name="name" required placeholder="Ex: Maria Luiza">
+                            <label for="name">Seu Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Ex: Professor João">
                         </div>
                         <div class="form-group">
                             <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required placeholder="maria@exemplo.com">
+                            <input type="email" id="email" name="email" placeholder="contato@exemplo.com">
                         </div>
                         <div class="form-group">
                             <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" required rows="5"
-                                placeholder="Sua mensagem..."></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Sua mensagem..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary submit-btn">
-                            <span class="btn-text">Enviar Mensagem</span>
-                            <span class="spinner hidden"></span>
+                            <span class="btn-text">Testar Validação JS</span>
                         </button>
-                        <div id="form-message" class="form-message"></div>
+                        <div id="form-message" class="form-message" style="margin-top:20px; font-weight: bold;"></div>
                     </form>
                 </div>
             </div>
@@ -217,12 +242,12 @@
 
     <footer class="footer">
         <div class="container footer-content">
-            <p>&copy; <span id="year"></span> Emmanuel. Construído com Vanilla JS + Node.</p>
+            <p>&copy; <span id="year"></span> Portfólio Acadêmico - Emmanuel Garakis. Construído com Vanilla JS.</p>
         </div>
     </footer>
 
-    <script src="js/api.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Script unificado com as lógicas nativas -->
+    <script src="script.js"></script>
 </body>
 
 </html>
