@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "title": "Zenix Deep Dive (ZDD)",
+    "description": "Implementação de um framework proprietário de análise profunda. Arquiteturei o fluxo de validação para medir viabilidade de produtos frente à infraestrutura tecnológica.",
+    "tags": [
+      "Arquitetura de Sistemas",
+      "Análise de Viabilidade",
+      "Estratégia"
+    ],
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800",
+    "link": "#",
+    "github": "https://github.com/Garakis"
+  },
+  {
+    "id": 2,
+    "title": "IA Condominial Autônoma",
+    "description": "Desenvolvimento de assistente virtual autônomo focado na automação de recepções. Estruturei a IA aplicando interface humana e síntese de voz natural de alta fidelidade.",
+    "tags": [
+      "Inteligência Artificial",
+      "Voice Synthesis",
+      "Automação"
+    ],
+    "image": "https://images.unsplash.com/photo-1620825937374-87fc1d6aafc1?auto=format&fit=crop&q=80&w=800",
+    "link": "#",
+    "github": "https://github.com/Garakis"
+  },
+  {
+    "id": 3,
+    "title": "Gestão de Backlog Complexo (FATEC)",
+    "description": "Atuação como Product Owner na estrutura de uma Software House. Liderei o alinhamento de stakeholders reais e gerenciei entregáveis contínuos focados na eficiência do negócio.",
+    "tags": [
+      "PO",
+      "Metodologias Ágeis",
+      "Gestão ClickUp"
+    ],
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
+    "link": "#",
+    "github": "https://github.com/Garakis"
+  }
+]
