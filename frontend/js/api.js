@@ -1,13 +1,15 @@
-// Configuração da API
-const API_URL = 'http://localhost:3000/api';
+// Configuração da API (Agora Estática)
+const API_URL = './data/projects.json';
 
 /**
- * Busca a lista de projetos do backend
+ * Busca a lista de projetos do JSON estático
  * @returns {Promise<Array>} Lista de projetos
  */
 async function fetchProjects() {
     try {
-        const response = await fetch(`${API_URL}/projects`);
+        // Usa caminhos relativos para garantir que funcione no GitHub Pages
+        // dependendo de onte está rodando (na raiz ou em um subdiretório)
+        const response = await fetch('./data/projects.json');
         if (!response.ok) {
             throw new Error('Falha na resposta da API');
         }
@@ -19,31 +21,24 @@ async function fetchProjects() {
 }
 
 /**
- * Envia mensagem de contato para o backend
+ * Envia mensagem de contato simulando um backend
  * @param {Object} data { name, email, message }
  * @returns {Promise<Object>} Resposta da API
  */
 async function sendContactMessage(data) {
-    try {
-        const response = await fetch(`${API_URL}/contact`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-
-        const result = await response.json();
-
-        if (!response.ok) {
-            throw new Error(result.error || 'Erro ao enviar mensagem');
+    return new Promise((resolve, reject) => {
+        // Validação básica do lado do cliente
+        if (!data.name || !data.email || !data.message) {
+            return reject(new Error('Todos os campos são obrigatórios.'));
         }
 
-        return result;
-    } catch (error) {
-        console.error('Erro no envio de contato:', error);
-        throw error;
-    }
+        console.log(`[Formulário de Contato Simulado] Nova mensagem de ${data.name} (${data.email}): ${data.message}`);
+
+        // Simula delay de rede de 1 segundo e responde sucesso
+        setTimeout(() => {
+            resolve({ success: true, message: 'Mensagem enviada com sucesso! Entrarei em contato em breve.' });
+        }, 1000);
+    });
 }
 
 // Exporta as funções globalmente ou para uso no main.js
