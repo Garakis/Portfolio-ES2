@@ -21,11 +21,11 @@ function applyGreetingRules() {
 
     // If/Else de validação do horário
     if (currentHour >= 5 && currentHour < 12) {
-        greetingText = "☀️ Bom dia! Bem-vindo ao meu Portfólio.";
+        greetingText = "☀️ Bom dia! Visão Técnica e Estratégica.";
     } else if (currentHour >= 12 && currentHour < 18) {
-        greetingText = "🌤️ Boa tarde! Bem-vindo ao meu Portfólio.";
+        greetingText = "🌤️ Boa tarde! Visão Técnica e Estratégica.";
     } else {
-        greetingText = "🌙 Boa noite! Bem-vindo ao meu Portfólio.";
+        greetingText = "🌙 Boa noite! Visão Técnica e Estratégica.";
     }
 
     greetingElement.textContent = greetingText;
