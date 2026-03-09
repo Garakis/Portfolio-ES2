@@ -36,7 +36,6 @@ function applyGreetingRules() {
    ========================================= */
 const portfolioData = {
     courses: [
-        { name: "Análise e Desenvolvimento de Sistemas", institution: "FATEC São José dos Campos", period: "2023 - 2026", type: "academic" },
         { name: "React e TypeScript", institution: "Rocketseat", period: "2024", type: "extra" },
         { name: "Engenharia de Prompt e IA Aplicada", institution: "Alura", period: "2024", type: "extra" },
         { name: "Clean Architecture & SOLID", institution: "Udemy", period: "2023", type: "extra" }
